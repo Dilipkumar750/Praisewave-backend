@@ -23,11 +23,11 @@ app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true, limit: '10mb' }))
 
 // Routes
-app.use('/api/auth', authRoutes)
-app.use('/api/blogs', blogRoutes)
+app.use('/auth', authRoutes)
+app.use('/blogs', blogRoutes)
 
 // Health Check
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
     message: 'PraiseWave Music Academy API is running smoothly',
